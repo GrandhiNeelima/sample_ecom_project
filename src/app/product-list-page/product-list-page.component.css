@@ -1,0 +1,11 @@
+.col1 img{
+    width: 40%;
+    height:60%;
+}
+.row{
+    display: flex;
+    height: 190px;
+}
+.col1,.col2{
+    width: 50%;
+}

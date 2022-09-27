@@ -1,0 +1,29 @@
+<h2>Login</h2>
+<div class="container">
+    
+    <!--<form [formGroup]="loginForm">
+        <label>Email</label>
+        <input type="" formControlName="email" placeholder="Email">
+        <label>Password</label>
+        <input type="" formControlName="password" placeholder="password">
+        <button (click)="submit()" >Login</button>
+    </form>-->
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+       <div class = "form-group">
+         <label for="username">Username: </label>
+        <input  type="text" formControlName="username" class="form-control" [ngClass]="{'is-invalid': submitted && f.username.errors}">
+       </div>
+       <!--<div *ngIf="submitted && f.username.errors">
+        <div *ngIf="f.username.errors.required">
+        Email is required
+       </div>
+       </div>-->
+       
+       <div class="form-group">
+        <label for="password">Password: </label>
+        <input  type="text" formControlName="password" class="form-control">
+       </div>
+        
+        <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+      </form>
+</div>

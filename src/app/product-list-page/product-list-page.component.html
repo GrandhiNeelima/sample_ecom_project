@@ -1,0 +1,46 @@
+<div class="container">
+    <h2>Product List Page</h2>
+    <!--<div class="row">
+        <div class="col1">
+            <img (click)="list()" src="assets/images/mobile3.jpeg">
+        </div>
+        <div class="col2">
+            <div>Samsung galaxy M13 5G(Startdust Brown,6GB,128GB Storage) | 500mAh Battery | Upto 12GB RAM with RAM Plus</div>
+            <div style="color:red">&#8377;15,999</div>
+            <div>Save Extra with No EMI Cost</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col1">
+            <img src="assets/images/mobile2.webp">
+        </div>
+        <div class="col2">
+            <div>Samsung galaxy M13 5G(Startdust Brown,6GB,128GB Storage) | 500mAh Battery | Upto 12GB RAM with RAM Plus</div>
+          <div style="color:red">&#8377;15,999</div>
+          <div>Save Extra with No EMI Cost</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col1">
+            <img src="assets/images/mobile1.webp">
+        </div>
+        <div class="col2">
+            <div>Samsung galaxy M13 5G(Startdust Brown,6GB,128GB Storage) | 500mAh Battery | Upto 12GB RAM with RAM Plus</div>
+          <div style="color:red">&#8377;15,999</div>
+          <div>Save Extra with No EMI Cost</div>
+        </div>
+    </div>
+</div>-->
+
+<div class="row" *ngFor = "let p of products, let i=index">
+    <div class="col1">
+        <img routerLink="/product-detail-page/{{p.id}}" src={{p.url}}>
+    </div>
+    <div class="col2">
+        <div >{{p.name}}</div>
+        <div><a routerLink="/product-detail-page/{{p.id}}">{{p.name}}</a></div>
+      <div style="color:red">&#8377;{{p.price}}</div>
+      <div>Save Extra with No EMI Cost</div>
+      <button (click)="addtocart(i,p.id)">Add To Cart</button>
+    </div>
+</div>

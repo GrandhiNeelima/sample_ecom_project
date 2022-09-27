@@ -1,0 +1,22 @@
+.row{
+    display: flex;
+    text-align: center;
+}
+.col{
+    width: 25%;
+}
+.col img{
+    width: 95%;
+    height: 60%;
+}
+.grid{
+    padding: 20px 30px;
+}
+.item img{
+    height: 160px;
+}
+.brand .col{
+    border: 2px solid black;
+    padding: 30px;
+    margin-right: 10px;
+}

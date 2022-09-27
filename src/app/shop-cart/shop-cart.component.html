@@ -1,0 +1,21 @@
+<div class="container">
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let ord of order1">
+                <td>{{ord.id}}</td>
+                <td><img src = "{{ord.image}}" style="height:70px"></td>
+                <td>{{ord.name}}</td>
+                <td>{{ord.price}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div>total:{{caltotal()}}</div>
+</div>

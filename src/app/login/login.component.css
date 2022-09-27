@@ -1,0 +1,11 @@
+label{
+    display: block;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+h2{
+    text-align: center;
+}
